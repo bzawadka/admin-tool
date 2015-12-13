@@ -1,0 +1,48 @@
+<div>
+    <h2>MessageVersions</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="messageVersion.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new MessageVersion</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Version</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="messageVersion in messageVersions track by messageVersion.id">
+                    <td><a ui-sref="messageVersion.detail({id:messageVersion.id})">{{messageVersion.id}}</a></td>
+                    <td>{{messageVersion.version}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="messageVersion.detail({id:messageVersion.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="messageVersion.edit({id:messageVersion.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="messageVersion.delete({id:messageVersion.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
