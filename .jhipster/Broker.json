@@ -1,0 +1,37 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "brokerStatus",
+            "otherEntityName": "brokerStatus",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "status"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "messageVersion",
+            "otherEntityName": "messageVersion",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "version"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "comment",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20151213205702",
+    "dto": "no",
+    "pagination": "no"
+}
