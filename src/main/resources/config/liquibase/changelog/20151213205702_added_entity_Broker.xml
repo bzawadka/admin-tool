@@ -28,7 +28,7 @@
             <column name="broker_status_id" type="bigint"/>
             <column name="message_version_id" type="bigint"/>
         </createTable>
-        
+
         <addForeignKeyConstraint baseColumnNames="broker_status_id"
                                  baseTableName="broker"
                                  constraintName="fk_broker_brokerstatus_id"
@@ -40,6 +40,11 @@
                                  constraintName="fk_broker_messageversion_id"
                                  referencedColumnNames="id"
                                  referencedTableName="message_version"/>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/broker.csv"
+                  separator=";"
+                  tableName="broker"/>
 
     </changeSet>
 </databaseChangeLog>

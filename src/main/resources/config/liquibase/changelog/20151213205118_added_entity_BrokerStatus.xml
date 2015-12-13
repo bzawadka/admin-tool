@@ -25,6 +25,9 @@
                 <constraints nullable="false" />
             </column>
         </createTable>
-        
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/broker_status.csv"
+                  separator=";"
+                  tableName="broker_status"/>
     </changeSet>
 </databaseChangeLog>

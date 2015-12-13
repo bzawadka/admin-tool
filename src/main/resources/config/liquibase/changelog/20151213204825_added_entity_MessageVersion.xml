@@ -25,6 +25,9 @@
                 <constraints nullable="false" />
             </column>
         </createTable>
-        
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/message_version.csv"
+                  separator=";"
+                  tableName="message_version"/>
     </changeSet>
 </databaseChangeLog>

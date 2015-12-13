@@ -1,0 +1,4 @@
+id;name;comment;broker_status_id;message_version_id
+1;UBS FX;;3;2
+2;UBS Equities;;2;2
+3;Vontobel;;1;1
