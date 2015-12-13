@@ -1,0 +1,48 @@
+<div>
+    <h2>BrokerStatuss</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="brokerStatus.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new BrokerStatus</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="brokerStatus in brokerStatuss track by brokerStatus.id">
+                    <td><a ui-sref="brokerStatus.detail({id:brokerStatus.id})">{{brokerStatus.id}}</a></td>
+                    <td>{{brokerStatus.status}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="brokerStatus.detail({id:brokerStatus.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="brokerStatus.edit({id:brokerStatus.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="brokerStatus.delete({id:brokerStatus.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
