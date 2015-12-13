@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "adminTool",
+    "packageName": "pl.zawadkba.admintool",
+    "packageFolder": "pl/zawadkba/admintool",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "ab2d87cc9c48d4ca1d1e8cd1fdbdb3ac94120822",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
